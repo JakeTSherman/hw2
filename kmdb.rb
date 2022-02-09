@@ -103,7 +103,7 @@ tdkr.rating = "PG-13"
 tdkr.director = "Christopher Nolan"
 tdkr.save 
 
-puts Movie.all.count
+#puts Movie.all.count
 
 bale = Person.new
 bale.name = "Christian Bale"
@@ -215,6 +215,29 @@ dawes2.movie_id = tdk.id
 dawes2.person_id = maggie.id
 dawes2.save
 
+gordon2 = Character.new
+gordon2.name = gordon.name
+gordon2.movie_id = tdkr.id
+gordon2.person_id = oldman.id
+gordon2.save
+
+bane = Character.new
+bane.name = "Bane"
+bane.movie_id = tdkr.id
+bane.person_id = hardy.id
+bane.save
+
+robin = Character.new
+robin.name = "James Blake"
+robin.movie_id = tdkr.id
+robin.person_id = joseph.id
+robin.save
+
+catwoman = Character.new
+catwoman.name = "Selena Kyle"
+catwoman.movie_id = tdkr.id
+catwoman.person_id = hathaway.id
+catwoman.save
 
 #####***** RECREATE MODEL ACTOR AND ADD ROLE TO TABLE -- DISCARD PERSON#####
 
