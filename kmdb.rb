@@ -105,6 +105,51 @@ tdkr.save
 
 puts Movie.all.count
 
+bale = Person.new
+bale.name = "Christian Bale"
+bale.save
+
+caine = Person.new
+caine.name = "Michael Caine"
+caine.save
+
+neeson = Person.new
+neeson.name = "Liam Neeson"
+neeson.save
+
+holmes = Person.new
+holmes.name = "Katie Holmes"
+holmes.save
+
+oldman = Person.new
+oldman.name = "Gary Oldman"
+oldman.save
+
+ledger = Person.new
+ledger.name = "Heath Ledger"
+ledger.save
+
+eckhart = Person.new
+eckhart.name = "Aaron Eckhart"
+eckhart.save
+
+maggie = Person.new
+maggie.name = "Maggie Gyllenhaal"
+maggie.save
+
+hardy = Person.new
+hardy.name = "Tom Hardy"
+hardy.save
+
+joseph = Person.new
+joseph.name = "Joseph Gordon-Levitt"
+joseph.save
+
+hathaway = Person.new
+hathaway.name = "Anne Hathaway"
+hathaway.save
+
+#####***** RECREATE MODEL ACTOR AND ADD ROLE TO TABLE -- DISCARD PERSON#####
 
 
 # Prints a header for the movies output
@@ -112,13 +157,14 @@ puts "Movies"
 puts "======"
 puts ""
 
-###puts "#{begins.title} #{begins.year} #{begins.rating} #{begins.director}"
-###puts "#{tdk.title} #{tdk.year} #{tdk.rating} #{tdk.director}"
-###puts "#{tdkr.title} #{tdkr.year} #{tdkr.rating} #{tdkr.director}"
+#puts "#{begins.title} #{begins.year} #{begins.rating} #{begins.director}"
+#puts "#{tdk.title} #{tdk.year} #{tdk.rating} #{tdk.director}"
+#puts "#{tdkr.title} #{tdkr.year} #{tdkr.rating} #{tdkr.director}"
 
-#for movie in Movie
- #   puts "#{movie.title} #{movie.year} #{movie.rating} #{movie.director}"
-#end
+movies = Movie.all
+for movie in movies
+   puts "#{movie.title} #{movie.year} #{movie.rating} #{movie.director}"
+end
 
 
 # Query the movies data and loop through the results to display the movies output
