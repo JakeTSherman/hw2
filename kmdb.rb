@@ -71,7 +71,7 @@
 # TODO!
 Movie.destroy_all
 Person.destroy_all
-Role.destroy_all
+Character.destroy_all
 
 # Generate models and tables, according to the domain model
 # TODO!
@@ -149,6 +149,20 @@ hathaway = Person.new
 hathaway.name = "Anne Hathaway"
 hathaway.save
 
+bruce = Character.new
+bruce.name = "Bruce Wayne"
+bruce.movie_id = begins.id
+bruce.person_id = bale.id
+bruce.save
+
+alfred = Character.new
+alfred.name = "Alfred"
+alfred.movie_id = begins.id
+alfred.person_id = caine.id
+alfred.save
+
+
+
 #####***** RECREATE MODEL ACTOR AND ADD ROLE TO TABLE -- DISCARD PERSON#####
 
 
@@ -178,3 +192,14 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+people = Person.all
+characters = Character.all
+
+
+for character in characters
+   for person in people
+      if character.person_id == person.id
+      puts "#{movie.title} #{person.name} #{character.name}"
+      end
+   end
+end
