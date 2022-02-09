@@ -173,6 +173,47 @@ alfred.movie_id = begins.id
 alfred.person_id = caine.id
 alfred.save
 
+ra = Character.new
+ra.name = "Ra's Al Ghul"
+ra.movie_id = begins.id
+ra.person_id = neeson.id
+ra.save
+
+rachel = Character.new
+rachel.name = "Rachel Dawes"
+rachel.movie_id = begins.id
+rachel.person_id = holmes.id
+rachel.save
+
+gordon = Character.new
+gordon.name = "Commissioner Gordon"
+gordon.movie_id = begins.id
+gordon.person_id = oldman.id
+gordon.save
+
+joker = Character.new
+joker.name = "Joker"
+joker.movie_id = tdk.id
+joker.person_id = ledger.id
+joker.save
+
+dent = Character.new
+dent.name = "Harvey Dent"
+dent.movie_id = tdk.id
+dent.person_id = eckhart.id
+dent.save
+
+alfred2 = Character.new
+alfred2.name = alfred.name
+alfred2.movie_id = tdk.id
+alfred2.person_id = caine.id
+alfred2.save
+
+dawes2 = Character.new
+dawes2.name = rachel.name
+dawes2.movie_id = tdk.id
+dawes2.person_id = maggie.id
+dawes2.save
 
 
 #####***** RECREATE MODEL ACTOR AND ADD ROLE TO TABLE -- DISCARD PERSON#####
