@@ -155,6 +155,18 @@ bruce.movie_id = begins.id
 bruce.person_id = bale.id
 bruce.save
 
+bruce2 = Character.new
+bruce2.name = bruce.name
+bruce2.movie_id = tdk.id
+bruce2.person_id = bale.id
+bruce2.save
+
+bruce3 = Character.new
+bruce3.name = bruce.name
+bruce3.movie_id = tdkr.id
+bruce3.person_id = bale.id
+bruce3.save
+
 alfred = Character.new
 alfred.name = "Alfred"
 alfred.movie_id = begins.id
@@ -195,11 +207,14 @@ puts ""
 people = Person.all
 characters = Character.all
 
-
-for character in characters
-   for person in people
-      if character.person_id == person.id
-      puts "#{movie.title} #{person.name} #{character.name}"
+for movie in movies
+   for character in characters
+      for person in people
+         if character.person_id == person.id
+            if character.movie_id == movie.id
+            puts "#{movie.title} #{person.name} #{character.name}"
+            end
+         end
       end
    end
 end
