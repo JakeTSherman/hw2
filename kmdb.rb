@@ -69,9 +69,12 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Movie.destroy_all
+
 
 # Generate models and tables, according to the domain model
 # TODO!
+
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
@@ -81,6 +84,15 @@
 puts "Movies"
 puts "======"
 puts ""
+
+###puts "#{begins.title} #{begins.year} #{begins.rating} #{begins.director}"
+###puts "#{tdk.title} #{tdk.year} #{tdk.rating} #{tdk.director}"
+###puts "#{tdkr.title} #{tdkr.year} #{tdkr.rating} #{tdkr.director}"
+
+#for movie in Movie
+ #   puts "#{movie.title} #{movie.year} #{movie.rating} #{movie.director}"
+#end
+
 
 # Query the movies data and loop through the results to display the movies output
 # TODO!
