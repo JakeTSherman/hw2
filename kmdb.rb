@@ -76,10 +76,36 @@ Role.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
 
+# -- Models created and migrated 
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+begins = Movie.new
+begins.title = "Batman Begins"
+begins.year = 2005
+begins.rating = "PG-13"
+begins.director = "Christopher Nolan"
+begins.save
+
+tdk = Movie.new
+tdk.title = "The Dark Knight"
+tdk.year = 2008
+tdk.rating = "PG-13"
+tdk.director = "Christopher Nolan"
+tdk.save 
+
+tdkr = Movie.new
+tdkr.title = "The Dark Knight Rises"
+tdkr.year = 2012
+tdkr.rating = "PG-13"
+tdkr.director = "Christopher Nolan"
+tdkr.save 
+
+puts Movie.all.count
+
+
 
 # Prints a header for the movies output
 puts "Movies"
